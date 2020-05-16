@@ -221,6 +221,34 @@ header a {
 
 .main-links {
     clear: both;
+    display: block;
+    width: 100%;
+    background: url(./assets/oscar-aguilar-327500-unsplash@2x.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    top: -1px;
+}
+
+.main-links h4 {
+    font-size: 30px;
+    margin: 15px;
+    color: white;
+
+}
+
+.main-links i {
+    color: #CC1D36;
+    font-size: 50px;
+}
+
+.main-links-content {
+    float:left;
+    width: calc(100% / 3 - 100px);
+    border: 1px solid red;
+    margin: 50px;
+    padding: 30px 0;
 }
 
 footer {
