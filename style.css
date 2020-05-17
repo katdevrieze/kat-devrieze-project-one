@@ -13,12 +13,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 
 /* TEXT STYLING
-    Buttons
-        Kanit, Bold Italic, 20px
-        Center, Line height: 29px
-    Body text
-        Roboto, Light, 20px
-        Line height: 29px
     Header Navagation
         Catamaran, Semibold, 18px
         Right, Line height: 29px
@@ -43,11 +37,16 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 body,
 html {
-    background: #0B0101;;
+    background: #0B0101;
+    color: #0B0101;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 29px;
 }
 
 main {
-    background-color: white;
+    background-color: rgb(250, 250, 251);
 }
 
 h1,
@@ -59,6 +58,15 @@ button {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
 }
+
+a,
+button,
+h2,
+h4,
+footer {
+    color: white;
+}
+
 h1 {
     font-size: 116.2px;
     line-height: 97px; 
@@ -66,64 +74,67 @@ h1 {
     color: #CC1D36;
     margin-bottom: 0;
 }
+
 h1 span,
 h3 span,
 footer span {
     display: block;
 }
+
 h2 {
     font-family: 'Lato', sans-serif;
     font-size: 31px;
     line-height: 31.6px;
     letter-spacing: 0.3px;
-    color: white;
-    font-weight: initial;
-    margin-top: 0;
     text-transform: lowercase;
+    font-weight: unset;
+    margin-top: 15px;
 }
 h3 {
     margin: 0;
     font-size: 42px;
     line-height: 43px;
 }
+h4 {
+    font-size: 30px;
+    margin: 15px;
+}
 
 h5 {
-    margin: 0;
+    margin: 0 0 15px 0;
     font-size: 25px;
 }
-a, button {
+a,
+button {
+    text-decoration: none;
     font-size: 20px;
     line-height: 29px;
-    text-decoration: none;
-    color: white;
     display: inline-block;
     text-align: center;
 }
+
 .header-navigation span a {
     font-family: 'Catamaran', sans-serif;
+    font-size: 18px;
 }
-main a {
+
+.button {
+    padding: 10px 25px;
     background-color: #BA0621;
-    padding: 7px 20px;
 }
 
-main p,
-footer p {
-    font-family: 'Roboto', sans-serif;
-}
-
-main p {
-    font-weight: 300;
-}
-footer p {
-    font-weight: 400;
-}
 ul {
     margin: 0;
     padding: 0;
 }
 li {
     list-style: none;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
 }
 
 .wrapper {
@@ -154,6 +165,7 @@ header a {
     margin: 5px;
 }
 
+
 .header-navigation {
     padding-top: 10px;
 }
@@ -170,11 +182,15 @@ header a {
 .header-title {
     position: absolute;
     left: 0;
-    bottom: 10%;
+    bottom: 12%;
+}
+.header-social a {
+    font-size: 24px;
+    margin: 4px;
 }
 .header-social {
     position: absolute;
-    right: 2%;
+    right: 4%;
     bottom: 5%;
 }
 .main-articles {
@@ -182,7 +198,7 @@ header a {
 }
 
 .main-news-articles h3 {
-    padding: 50px;
+    padding: 100px;
 }
 
 .main-articles-gallery .image-container{
@@ -236,8 +252,9 @@ footer .container:last-of-type {
 }
 
 .main-featured .text-container div {
+    clear: both;
     max-width: 600px;
-    padding: 10%;
+    padding: 13% 10% 10% 10%;
 }
 
 .main-featured .feature-container:nth-of-type(odd) .text-container div {
@@ -259,13 +276,6 @@ footer .container:last-of-type {
     top: -1px;
 }
 
-.main-links h4 {
-    font-size: 30px;
-    margin: 15px;
-    color: white;
-
-}
-
 .main-links i {
     color: #CC1D36;
     font-size: 50px;
@@ -275,29 +285,32 @@ footer .container:last-of-type {
     float:left;
     width: calc(100% / 3 - 100px);
     margin: 50px;
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 footer {
     position: relative;
     top: -1px;
     background-color: #6C0918;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29px;
 }
 footer .wrapper {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 footer .container {
     float: left;
     margin: 0 40px;
+    width: 50%;
 }
 
-footer .container:first-of-type {
-    width: 50%;
+footer .container:last-of-type {
+    width: calc(50% - 80px);
+}
+.footer-contact {
+    float: left;
+}
+
+.footer-navigation {
+    float: right;
 }
 
 footer nav {
@@ -307,26 +320,32 @@ footer nav {
 footer form {
     background-color: white;
     display: block;
-    height: 45px;
+    height: 55px;
+    margin-top: 10px;
 }
 
 footer button,
 footer input[type="email"] {
     border: none;
+    display: inline-block;
+    height: 100%;
 }
 
-footer button {
-    padding: 7px 20px;
+button {
     background-color: #0B0101;
     float: right;
-    height: 100%;
+    width: 25%;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 footer input[type="email"] {
     font-family: inherit;
     display: inline-block;
     height: 100%;
-    width: calc(100% - 150px);
+    width: 75%;
     padding-left: 40px;
 }
 
@@ -340,7 +359,7 @@ footer span p:last-child {
 @media (max-width: 1334px) {
     .main-featured .feature-container .text-container div {
         max-width: none;
-        float: clear;
+        float: none;
     }
     .main-featured .feature-container:nth-of-type(odd) .text-container div {
         padding-left: 10%;
