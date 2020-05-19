@@ -13,6 +13,7 @@
     <header>
         <div class="wrapper">
             <nav class="header-navigation">
+                <div class="hamburger"><img src="./mobile-assets/hamburger.svg" alt="Menu Button"></div>
                 <ul class="clearfix">
                     <li><a href="#">Drive Solo</a></li>
                     <span class="clearfix">
@@ -30,27 +31,30 @@
         </div>
         <nav class="header-social">
             <ul>
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href=""><i class="fab fa-facebook-f"></i></a> </li>
-                <li><a href=""><i class="fab fa-snapchat-ghost"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" aria-label="Instagram Link"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Facebook Link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
+                <li><a href="#" aria-label="Snapchat Link"><i class="fab fa-snapchat-ghost aria-hidden="true""></i></a></li>
+                <li><a href="#" aria-label="Twitter Link"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="main-articles">
+        <section class="main-articles spacing">
             <div class="wrapper">
                 <div class="main-news-articles">
                     <h3>News Articles</h3>
-                    <ul class="main-articles-gallery clearfix">
-                        <li class="image-container"><img src="./assets/image-2_2@2x.png" alt=""></li>
-                        <li class="image-container"><img src="./assets/image-3@2x.png" alt=""></li>
-                        <li class="image-container"><img src="./assets/image-4@2x.png" alt=""></li>
+                    <ul class="main-articles-gallery spacing clearfix">
+                        <li class="image-container"><img src="./assets/image-2_2@2x.png" alt="Close up of rear profile of red car with spoiler and fancy rims."></li>
+                        <li class="image-container"><img src="./assets/image-3@2x.png" alt="Close up of front profile of red car."></li>
+                        <li class="image-container"><img src="./assets/image-4@2x.png" alt="Close up of rear tail-light of red car in traffic."></li>
                     </ul>
                 </div>
                 <div class="main-articles-highlight clearfix">
                     <div class="image-container">
-                        <img src="./assets/image-6@2x.png" alt="">
+                        <picture>
+                            <source srcset="./mobile-assets/yellow-stripe-mobile.png" media="(max-width: 480px)">
+                            <img src="./assets/image-6@2x.png" alt="Front of grey car with yellow stripe.">
+                        </picture>
                     </div>
                     <div class="text-container">
                         <h3>This Week's Highlight</h3>
@@ -63,10 +67,13 @@
         <section class="main-featured clearfix"> 
             <div class="feature-container clearfix">
                 <div class="image-container">
-                    <img src="./assets/image-2@2x.png" alt="">
+                    <picture>
+                        <source srcset="./mobile-assets/new-models-mobile.png" media="(max-width: 480px)">
+                        <img src="./assets/image-2@2x.png" alt="White car with blue stripe on hood outside on concrete.">
+                    </picture>
                 </div>
                 <div class="text-container clearfix">
-                    <div>
+                    <div class="inner">
                         <h3>New Models to <span>Look Into It</span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi accusamus ipsum quisquam unde quam facere suscipit quia aliquam quas dolores possimus quis quae, totam provident fugit inventore corporis ullam quod. Tempore sequi natus ad, a quisquam cupiditate doloremque?</p>
                         <a href=""class="button">Read More</a>
@@ -75,10 +82,13 @@
             </div>
             <div class="feature-container clearfix">
                 <div class="image-container">
-                    <img src="./assets/image-2-copy@2x.png" alt="">
+                    <picture>
+                        <source srcset="./mobile-assets/night-style-mobile.png" media="(max-width: 480px)">
+                        <img src="./assets/image-2-copy@2x.png" alt="White car in garage with other white cards in the background.">
+                    </picture>
                 </div>
                 <div class="text-container clearfix">
-                    <div>
+                    <div class="inner">
                         <h3>Drive In the Style <span>in the Night</span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque numquam blanditiis molestias praesentium! Harum eveniet nihil praesentium, debitis similique illo quos, delectus non sequi tempore eum quam voluptatum dicta? Minus, iusto dolore.</p>
                         <a href="" class="button">Read More</a>
@@ -86,25 +96,25 @@
                 </div>
             </div>
         </section>
-        <section class="main-links clearfix">
+        <section class="main-links spacing clearfix">
             <div class="wrapper">
                 <div class="main-links-content">
-                    <i class="fas fa-car"></i>
+                    <i class="fas fa-car aria-hidden="true""></i>
                     <h4>Shop Brands</h4>
                 </div>
                 <div class="main-links-content">
-                    <i class="fas fa-briefcase"></i>
+                    <i class="fas fa-briefcase" aria-hidden="true"></i>
                     <h4>Jobs</h4>
                 </div>
                 <div class="main-links-content">
-                    <i class="fas fa-calendar-check"></i>
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     <h4>Events</h4>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="wrapper clearfix">
+        <div class="wrapper clearfix spacing">
             <div class="footer-subscribe container">
                 <h5>Stay Updated</h5>
                 <p>Subscribe to our newsletter to keep updated.</p>
@@ -113,7 +123,7 @@
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
-            <div class="container clearfix">
+            <div class="footer-content container clearfix">
                 <div class="footer-contact">
                     <h5>Contact</h5>
                     <p>info@email.com | 123 - 456 - 7890<span>123 Some Road, Toronto, ON</span><span>A5A 5A5, Canada</span></p>
